@@ -69,7 +69,17 @@ def test_get_account_not_found(self):
 # LIST ALL ACCOUNTS
 ######################################################################
 
-# ... place you code here to LIST accounts ...
+@app.route("/accounts", methods=["GET"])
+def list_accounts():
+    """
+    List all Accounts
+    This endpoint will list all Accounts
+    """
+    app.logger.info("Request to list Accounts")
+    # use the Account.all() method to retrieve all accounts
+    # create a list of serialize() accounts
+    # log the number of accounts being returned in the list 
+    # return the list with a return code of status.HTTP_200_OK
 
 
 ######################################################################
